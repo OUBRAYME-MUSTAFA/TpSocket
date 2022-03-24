@@ -16,18 +16,12 @@ public class MyServeur{
 		Socket socket1  = serveur.accept();
 		InputStream is  = socket1.getInputStream();
 		OutputStream os = socket1.getOutputStream();
-		//***********************this for one octet
-		/*System.out.println("waiting for an input ");
-		int nb = is.read();
-		System.out.println("Done I recive  "+nb);
-		int res = nb *2;
-		System.out.println("And i sent   "+res);
-		os.write(res);*/
-		//***********************this for more octet
+	
+	
 		BufferedReader br = new BufferedReader( new InputStreamReader(is));
 		System.out.println("waiting for some characters .......");
 		String s =  br.readLine();
-		System.out.println("itdone and i got this "+s);
+		System.out.println("it's done and i got this "+s);
 		socket1.close();
 	}
 	
